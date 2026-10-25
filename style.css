@@ -55,11 +55,29 @@ nav {
 }
 
 .hero {
-    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 6rem 0 2rem;
+}
+
+.hero-about {
     max-width: 800px;
+    margin-top: 4.5rem;
+    scroll-margin-top: 2rem;
+}
+
+.hero-about h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-about p:not(.eyebrow) {
+    margin-bottom: 1rem;
+}
+
+#projects {
+    padding-top: 3rem;
 }
 
 .eyebrow {
@@ -162,6 +180,25 @@ section {
     font-size: 0.9rem;
 }
 
+.contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    font-size: 1.1rem;
+}
+
+.contact-links a {
+    width: fit-content;
+    border-bottom: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
 footer {
     padding: 3rem 0;
     border-top: 1px solid var(--border);
@@ -179,5 +216,22 @@ footer {
 
     section {
         padding: 5rem 0;
+    }
+
+    .hero {
+        padding: 4rem 0 1rem;
+    }
+
+    .hero-about {
+        margin-top: 3.5rem;
+    }
+
+    #projects {
+        padding-top: 3rem;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }
